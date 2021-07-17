@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup On Button Click</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="about">
+        <!-- A div called about which forms the top part -->
+        <h1>
+            About Us
+        </h1>
+        <div class="span">━━━━━━</div> 
+        <!-- A line you can also use hr tag .-->
+    </div>
+
+    <!-- Making the intro main content in div.text👇👇-->
+    <div class="text">
+        Read complete article by clicking on that read more button which i have made...It will open a popup so you can read complete article from there this is only a part of the article which I am copy pasting<br>
+        Source:-Tools And Appliances Website click <a href="https://myprivatecard.com/tools-and-appliances/" target="_blank" style="text-decoration: none; color: rgb(173, 173, 77);">here </a>to go there<br> ” year of established 1976.
+        nature of business dealer in garage tools petrol pump and tenker material. “
+        
+        OUR SPECIALITIES KNOWLEDGEABLE TERM OF PROFESSIONALS COMPLETE CLIENT SATISFACTION  ETHICAL BUSINESS POLICIES  AFFORDABLE PRICE  QUALITATIVE PRODUCTS  ABILTY TO UNDERTAKE BULK ORDER USE OF ADVANCE TECHNOLOGY  TOOLS AND APPLIANCES CO. HAS BEEN A PROVIDING HIGH QUALITY WITH EXCELLENT AFTER SALES AND SERVICE. A GREAT EXPERIENCE WITH HAPPY CLIENT.
+        
+        
+    </div>
+    <!-- Our popup open button with id open-btn 👇👇-->
+    <button id="open-btn">Read More</button>
+    <!-- Popup with initial display none👇👇 -->
+    <div class="popup">
+      <h2> More about us</h2>
+      <div class="more-about">
+        <!-- Complete Text 👇👇  -->
+        <p>
+            OUR SPECIALITIES KNOWLEDGEABLE TERM OF PROFESSIONALS COMPLETE CLIENT SATISFACTION  ETHICAL BUSINESS POLICIES  AFFORDABLE PRICE  QUALITATIVE PRODUCTS  ABILTY TO UNDERTAKE BULK ORDER USE OF ADVANCE TECHNOLOGY  TOOLS AND APPLIANCES CO. HAS BEEN A PROVIDING HIGH QUALITY WITH EXCELLENT AFTER SALES AND SERVICE. A GREAT EXPERIENCE WITH HAPPY CLIENT.
+
+            SINCE 1976 TOOLS AND APPLIANCES CO HAS BEEN AT THE SAME LOCATION OWNED AND OPERATED BY SOME OF THE 2 ND GENERATION THEY ATTRIBUTE THEIR LOYAL CUSTOMER BASE TO CARRYING ON THE LEGACY OF BELIEF IN GIVING EVERYONE WHO WALKS THROUGH THEIR DOOR FRIENDLY PERSONAL SERVICE.HE CAN SERVICE YOUR PRODUCT WHEN YOU NEED IT.THE SALES STAFF ARE EXPERIENCED AND READY TO TAKE CARE OF YOU
+          </p>
+      </div>
+      <!-- Close btn inside popup div👇👇 -->
+      <div id="close-X"><i class="fas fa-window-close" ></i></div>
+    </div>
+
+    <div class="change-font"> Made with ♥ by <a href="github.com/VeerShah900">Veer Shah</a> </div>
+ <!-- Finally the js part😎😃 -->
+    <script>
+        // This is to declare a variable close and get its value using getelement by ID same with other two variables we ca also use querry selector I have used that👇👇
+        var close = document.getElementById('close-X');
+        var open = document.getElementById('open-btn');
+        var pop = document.querySelector('.popup')
+        // Now onnclicking the value assigned with open variable name we will run a function a1👇👇 
+        open.onclick = function a1(){
+            // We will add edit class in classlist of pop so we can now write like .pop.edit in css
+            // Then we will edit css and make popups display block
+            pop.classList.add('edit')
+        }
+        close.onclick = function a2(){
+            // We will remove edit from popup.edit on clicking the close button 👇👇
+            pop.classList.remove('edit')
+        }
+    </script>
+</body>
+</html>
